@@ -1,0 +1,207 @@
+html {
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+/* ANIMATIONS  */
+@keyframes slideIn {
+    from {
+        transform: translateY(250px);
+        opacity: 0;
+    }to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+body {
+    background-color: hsla(30, 2%, 17%, 0.788);
+}
+h1 {
+    margin-top: 40px;
+    text-align: center;
+    color: hsl(31, 87%, 49%);
+    font-size: 4.5rem;
+    text-shadow: 3px 3px 5px hsl(0, 0%, 0%), 3px 3px 5px hsl(0, 0%, 0%);
+}
+#logo{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-image: url(logobb.png);
+    height: 150px;
+    width: 150px;
+    filter: drop-shadow(0px 0px 5px hsl(0, 0%, 0%));
+    background-size: cover;
+}
+/* ACTION BUTTONS CONTAINER */
+.action-btns{
+    width: 20%;
+    height: 600px;
+    margin-right: 80%;
+    top: 200px;
+    position: absolute;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    flex-direction: column;
+    padding: 50px;
+}
+/* ACTION BUTTONS DESIGN & ANIMATIONS */
+.btn{
+    border: 2px solid black;
+    background-color: hsl(119, 100%, 59%);
+    height: 70px;
+    width: 130px;
+    border-radius: 20px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+} .btn:hover{
+    box-shadow: 1px 1px 15px hsl(119, 100%, 59%);
+    transform: scale(1.03)
+} .btn:active{
+    background-color: hsl(221, 79%, 51%);
+    box-shadow: 1px 1px 15px hsl(221, 79%, 51%);
+}
+/* MENU ITEMS CONTAINER */
+.container{
+    width: 55%;
+    height: 600px;
+    margin-left: 20%;
+    margin-right: 20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+    justify-content: center;
+}
+/*  MENU ITEMS DESIGN */
+.menu-items{
+    border: solid rgb(0, 0, 0) 3px;
+    height: 145px;
+    width: 155px;
+    border-radius: 20px;
+    background-size: cover;
+    cursor: pointer;
+    opacity: 0;
+    animation: slideIn .30s ease-in-out forwards;
+}.menu-items p {
+    color: white;
+    border: solid black 2px;
+    background-color: black;
+    text-align: center;
+    border-radius: 20px;
+    width: 155px;
+    right: -2px;
+    margin-top: 123px;
+    font-size: 1rem;
+}
+/* SUMMARY OF ORDERS DISPLAY */
+.summary-of-orders{
+    height: 500px;
+    width: 200px;
+    border: solid black 3px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    right: 5%;
+    top: 25%;
+    border-radius: 20px;
+}
+#menu {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+#list{
+    text-align: center;
+    font-weight: bold;
+    font-size: .75em;
+}
+
+/* RESPONSIVE DESIGNS */
+/* Smartphones in portrait orientation */
+@media (min-width: 320px) and (orientation: portrait) {
+    html {
+        scroll-behavior: smooth;
+        overflow: visible;
+    }
+    .summary-of-orders{
+    right: 3%;
+    top: 200px;
+
+    }
+    .container{
+        margin-top: 100px;
+        width: 55%;
+        height: 400px;
+    }
+    .action-btns{
+        left: -3%;
+    }
+    .menu-items{
+        height: 95px;
+        width: 105px;
+    }
+    .menu-items p{
+        width: 105px;
+        font-size: .6em;
+        margin-top: 82px;
+        position: absolute;
+    }
+  }
+  
+
+/* Table in landscape orientation */
+@media (max-width: 767px) and (orientation: landscape) {
+    html {
+        scroll-behavior: smooth;
+        overflow: visible;
+    }
+    .summary-of-orders{
+        right: 3%;
+        top: 200px;
+        }
+    .container{
+        width: 50%;        
+        }
+    .btn{
+        top: 200px;
+        position: sticky;
+        left: 2%;
+        }
+}
+
+/* Smartphones in landscape orientation
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .container {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    .action-btns {
+        width: 15%;
+        margin-right: 10%;
+        top: 200px;
+        font-size: 10%;
+        position: absolute;
+        padding: 20px;
+
+    }
+    .summary-of-orders {
+        right: 3%;
+        top: 200px;
+        width: 15%;
+        height: 400px;
+        font-size: .8rem;
+    }
+    .btn {
+        width: 80%;
+        height: auto;
+        font-size: 1.2rem;
+    }
+}
+
+   */
