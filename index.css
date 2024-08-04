@@ -1,0 +1,179 @@
+html {
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+/* ANIMATIONS  */
+@keyframes slideIn {
+    from {
+        transform: translateY(250px);
+        opacity: 0;
+    }to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+#logo{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-image: url(logobb.png);
+    height: 150px;
+    width: 150px;
+    filter: drop-shadow(0px 0px 5px hsl(0, 0%, 0%));
+    background-size: cover;
+}
+body {
+    background-color: hsla(30, 2%, 17%, 0.788);
+}
+h1 {
+    margin-top: 40px;
+    text-align: center;
+    color: hsl(31, 87%, 49%);
+    font-size: 4.5rem;
+    text-shadow: 3px 3px 5px hsl(0, 0%, 0%), 3px 3px 5px hsl(0, 0%, 0%);
+}
+.main-container {
+    height: 600px;
+    width: 80%;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 20%;
+}
+/* MENU CHOICES */
+.menu-items {
+    border: solid black 2px;
+    height: 250px;
+    width: 330px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-size: cover;
+    opacity: 0;
+    animation: slideIn .30s ease-in-out forwards;
+}.menu-items p {
+    color: white;
+    border: solid black 2px;
+    background-color: black;
+    text-align: center;
+    border-radius: 20px;
+    width: 330px;
+    right: -2px;
+    margin-top: 217px;
+    font-size: 1.7rem;
+}.menu-items:hover {
+    box-shadow: 3px 3px 20px hsla(0, 0%, 100%, 0.545);
+}
+/* IMAGES */
+#choice-1 {
+    background-image: url(main-menu-1.png);
+}#choice-2 {
+    background-image: url(main-menu-2.png);
+}#choice-3 {
+    background-image: url(main-menu-3.jpg);
+}#choice-4 {
+    background-image: url(main-menu-4.png);
+}#choice-5 {
+    background-image: url(main-menu-5.png);
+}#choice-6 {
+    background-image: url(main-menu-6.png);
+}
+/* MENU ITEM ANIMATION */
+.menu-items:nth-child(1) {
+    animation-delay: 0.10s;
+}.menu-items:nth-child(2) {
+    animation-delay: 0.15s;
+}.menu-items:nth-child(3) {
+    animation-delay: 0.20s;
+}.menu-items:nth-child(4) {
+    animation-delay: 0.25s;
+}.menu-items:nth-child(5) {
+    animation-delay: .30s;
+}.menu-items:nth-child(6) {
+    animation-delay: .35s;
+}
+/* MANAGERS BUTTONS DESIGN & ANIMATIONS*/
+#managers-btn {
+    height: 120px;
+    width: 120px;
+    padding: 5px;
+    border-radius: 100px;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: hsl(119, 100%, 59%);
+    border: solid black 3px;
+    position: absolute;
+    cursor: pointer;
+    top: 430px;
+    right: 2%;
+}#managers-btn:hover{
+    box-shadow: 1px 1px 15px hsl(119, 100%, 59%);
+    }#managers-btn:active {
+    background-color: hsl(221, 79%, 51%);
+    box-shadow: 1px 1px 15px hsl(221, 79%, 51%);
+}
+
+@media (min-width: 320px) and (orientation: portrait) {
+    html {
+        scroll-behavior: smooth;
+        overflow: visible;
+    }
+    .main-container{
+        width: 100%;
+        margin-left: -7%;
+        height: 400px;
+        gap: 10px;
+    }
+    .menu-items{
+        height: 180px;
+        width: 260px;
+    }
+    .menu-items p{
+        width: 260px;
+        margin-top: 160px;
+        font-size: 1.2em;
+    }
+    #managers-btn{
+        font-size: 1rem;
+        height: 100px;
+        width: 100px;
+        top: 350px;
+        right: 10px;
+    }
+  }
+  
+
+/* Table in landscape orientation */
+@media (max-width: 767px) and (orientation: landscape) {
+    html {
+        scroll-behavior: smooth;
+        overflow: visible;
+    }
+    .main-container{
+        width: 100%;
+        margin-left: -7%;
+        height: 400px;
+        gap: 10px;
+    }
+    .menu-items{
+        height: 180px;
+        width: 260px;
+    }
+    .menu-items p{
+        width: 260px;
+        margin-top: 160px;
+        font-size: 1.2em;
+    }
+    #managers-btn{
+        font-size: 1rem;
+        height: 100px;
+        width: 100px;
+        top: 350px;
+        right: 10px;
+    }
+  }
+  
